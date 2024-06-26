@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Investment Dashboard</title>
+    <link rel="stylesheet" href="styles/desktop.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="login-container" id="login-container">
+        <div class="login-box">
+            <img src="/images/Paypal_2014_logo.png" alt="PayPal Logo" class="paypal-logo">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="dashboard-container" id="dashboard-container" style="display: none;">
+        <header>
+            <div class="logo"> <img src="/images/sdss.png" alt=""></div>
+            <h1>Investment Dashboard</h1>
+            <h2 id="welcome-message">Welcome back, Kolleen Wooten</h2>
+        </header>
+        <div class="investment-info">
+            <div class="info-box">
+                <h3>Amount Invested</h3>
+                <p id="amount-invested">$180,000</p>
+            </div>
+            <div class="info-box">
+                <h3>Percentage Return</h3>
+                <p id="percentage-return">$20,000</p>
+            </div>
+            <div class="info-box">
+                <h3>Amount to Withdraw (Paid) </h3>
+                <p id="amount-withdraw">10% <br>$18,000</p>
+            </div>
+            <div class="info-box">
+                <h3>Amount Required for Withdrawal (Late Payments)</h3>
+                <p id="amount-required">5% <br>$9000</p>
+            </div>
+            <div class="info-box">
+                <h3>Total Amount to be withdrawn</h3>
+                <p id="amount-required">$200,000</p>
+            </div>
+        </div>
+        <div class="charts-container">
+            <div class="charts-row">
+                <div class="chart-box">
+                    <canvas id="investmentChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="earningsChart"></canvas>
+                </div>
+            </div>
+            <div class="charts-row">
+                <div class="chart-box">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="withdrawalChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <p>NOTE: Please provide your bank details to receive your investment refund. Your payment will be deposited into the bank
+            account you provide once you make an additional deposit of 5% of your investment to cover the late payment fee. After
+            this, there will be no further late payment fees.</p>
+        </div>
+
+        <button id="withdraw-button">Withdraw</button>
+
+        <footer>
+            <p>&copy; 2024 PayPal Investments. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>
